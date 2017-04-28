@@ -1,0 +1,25 @@
+#header 
+{
+    min-height: 100px;
+    background: orange;
+    color: white;
+}
+#section #left_menu
+{
+    min-height: 80vh;
+    background: black;
+}
+.nav > li > a
+{
+ 
+    color: white;
+}
+
+.nav > li > a:hover
+{
+    background: none;
+}
+#section
+{
+    text-align: justify;
+}
