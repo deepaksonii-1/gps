@@ -37,12 +37,18 @@
           directionsDisplay = new google.maps.DirectionsRenderer();
           var chicago = new google.maps.LatLng(23.231323, 77.432592);
           var mapOptions = {
-              zoom: 7,
+              zoom: 18,
               center: chicago
           };
           map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
           directionsDisplay.setMap(map);
           google.maps.event.addDomListener(document.getElementById('routebtn'), 'click', calcRoute);
+          var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(23.231323,77.432592),
+          map: map,
+          optimized: false,
+          title: 'Your Location'
+          });
       }
 
       function calcRoute() {

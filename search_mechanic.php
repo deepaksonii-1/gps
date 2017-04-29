@@ -146,12 +146,19 @@ $con  = mysqli_connect('localhost','root','','gps_service');
       };
 
       var map = new google.maps.Map(document.getElementById("map<?php echo $i; ?>"), myOptions);
+      var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(<?php echo $rs['latitude']; ?>, <?php echo $rs['lognitude']; ?>),
+      map: map,
+      optimized: false,
+      title: '<?php echo $rs['address']; ?>'
+      });
+
    </script>
 
                   <br />
                   <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
                   <br />
-                  <?php echo $d; ?>
+                  <?php echo 'Distance: ',$d,'<br> Add: ',$rs['address'],'<br>' ?>
                     <a href="direction.php?lati=<?php echo $rs['latitude']; ?>&longi=<?php echo $rs['lognitude']; ?>">Show route</a>
                   </center>
 

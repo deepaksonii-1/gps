@@ -27,7 +27,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
 
 </head>
 
@@ -38,7 +38,7 @@
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <a id="menu-close" href="#"  class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
                 <a href="#top" onclick=$("#menu-close").click();>Start Bootstrap</a>
             </li>
@@ -57,15 +57,15 @@
             <li>
                 <a href="#contact" onclick=$("#menu-close").click();>Find Location</a>
             </li>
-            
+
             <li>
                 <a href="#signup" onclick=$("#menu-close").click();>SignUp</a>
             </li>
-            
+
             <li>
                 <a href="#signup" onclick=$("#menu-close").click();>Login</a>
             </li>
-            
+
             <li>
                 <a href="Admin/dashboard.php" onclick=$("#menu-close").click();>Admin</a>
             </li>
@@ -78,13 +78,13 @@
             <h1>Find Your Mechanice Near By You</h1>
             <form action="">
                 <div class="form-grop col-sm-4 col-sm-offset-4">
-                     
+
                     <a href="getloc.php" class="btn btn-danger btn-lg fa fa-map-marker fa-2x"></a>
-                    
-                    
+
+
                 </div>
-                
-                
+
+
             </form>
         </div>
     </header>
@@ -185,67 +185,67 @@
     <br />
     <br />
     <div class="row" id="signup">
-        
+
          <div class="container">
-             
+
                  <div class="col-sm-6">
                       <h2>User Login Section</h2>
-                       
+
                        <form action="">
-                           
+
                            <div class="form-group">
-                               
+
                                <input type="text" name="un" id="" class="form-control" placeholder="Enter UserName">
                            </div>
-                           
+
                             <div class="form-group">
-                               
+
                                <input type="password" name="un" id="" class="form-control" placeholder="Enter Password">
                            </div>
                             <div class="form-group">
-                               
+
                                <input type="submit" name="un" value="Login" id="" class="btn btn-danger">
                            </div>
                        </form>
-                     
+
                  </div>
-                 
+
                   <div class="col-sm-6">
-                    
+
                     <h2>User Signup Section</h2>
-                       
+
                        <form action="">
-                          
+
                            <div class="form-group">
-                               
+
                                <input type="text" name="un" id="" class="form-control" placeholder="Enter Name">
                            </div>
                             <div class="form-group">
-                               
+
                                <input type="text" name="un" id="" class="form-control" placeholder="Enter Email">
                            </div>
-                           
+
                            <div class="form-group">
-                               
+
                                <input type="text" name="un" id="" class="form-control" placeholder="Enter UserName">
                            </div>
-                           
+
                             <div class="form-group">
-                               
+
                                <input type="password" name="un" id="" class="form-control" placeholder="Enter Password">
                            </div>
                             <div class="form-group">
-                               
+
                                <input type="submit" name="un" value="Signup" id="" class="btn btn-danger">
                            </div>
                        </form>
-                     
+
                  </div>
-             
-             
+
+
          </div>
-        
-        
+
+
     </div>
     <section id="portfolio" class="portfolio">
         <div class="container">
@@ -257,7 +257,7 @@
                         <h4>We want to create an online web application, here any fresher or experience can get jobs easily. No consultancy and any third party involved. A Company can directly call to a fresher or experience. All profiles are publicly visible with just basic information required for a company like skills, experience, qualification.</h4>
                     </div>
                     <!-- /.row (nested) -->
-                   
+
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
@@ -272,7 +272,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h3>Below Find Your Location</h3>
-                    
+
                     <a href="#" class="btn btn-lg btn-dark">Locate Me</a>
                 </div>
             </div>
