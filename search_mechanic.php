@@ -15,7 +15,7 @@ $con  = mysqli_connect('localhost','root','','gps_service');
     <title>GPS SERVICE CENTER</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
@@ -32,7 +32,13 @@ $con  = mysqli_connect('localhost','root','','gps_service');
     <![endif]-->
 
       <script type="text/javascript"  src="http://maps.google.com/maps/api/js?key=AIzaSyDBQq29VPtG5NHueVv0BjlDQBKXhlxcLOg"></script>
+<style>
+figure{
+  max-width: 150px;
+  max-height: 200px;
+}
 
+</style>
 </head>
 
 <body >
@@ -70,9 +76,9 @@ $con  = mysqli_connect('localhost','root','','gps_service');
 
         <div id="map-canvas"></div>
 
-
+</div>
         <hr />
-
+<div class="container">
         <?php
 
                function distance($lat1, $lon1, $lat2, $lon2, $unit) {
@@ -114,14 +120,15 @@ $con  = mysqli_connect('localhost','root','','gps_service');
               ?>
 
 
-
-        <div class="col-sm-8 col-sm-offset-2">
+<div class="row">
 
                <div class="col-sm-2">
-                   <img src="img/p1.jpeg" class="img-responsive img-circle img-thumbnail"/>
+                 <figure>
+                   <img src="img/p1.jpeg" class="img-responsive img-thumbnail"/>
+                   </figure>
                </div>
 
-                <div class="col-sm-8">
+                <div class="col-sm-3">
                    <h3><?php echo $rs['name']; ?></h3>
                    <p>Exp: <?php echo $rs['exp']; ?> Years</p>
                    <p><span class="fa fa-phone"></span> <?php echo $rs['contact']; ?></p>
@@ -134,13 +141,13 @@ $con  = mysqli_connect('localhost','root','','gps_service');
 
                 </div>
 
-                <div class="col-sm-2">
+                <div class="col-sm-7">
                 <br />
-                 <center>
-                   <div id="map<?php echo $i; ?>" style="width: 400px; height: 300px"></div>
+
+                   <div id="map<?php echo $i; ?>" style="width: 400px; height: 250px; float: left;"></div>
         <script type="text/javascript">
       var myOptions = {
-         zoom: 20,
+         zoom: 14,
          center: new google.maps.LatLng(<?php echo $rs['latitude']; ?>, <?php echo $rs['lognitude']; ?>),
          mapTypeId: google.maps.MapTypeId.ROADMAP
       };
@@ -155,16 +162,23 @@ $con  = mysqli_connect('localhost','root','','gps_service');
 
    </script>
 
+<div class="side" style="padding: 10px; margin-left: 400px;">
                   <br />
                   <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
                   <br />
-                  <?php echo 'Distance: ',$d,'<br> Add: ',$rs['address'],'<br>' ?>
-                    <a href="direction.php?lati=<?php echo $rs['latitude']; ?>&longi=<?php echo $rs['lognitude']; ?>">Show route</a>
-                  </center>
+                  <?php $d = substr($d, 0, 4) ?>
+                  <?php echo '<kbd>Distance:</kbd> ',$d,'km<br><kbd>Add:</kbd> ',$rs['address'],'<br>' ?>
+
+
+                    <a class="btn btn-default" href="direction.php?lati=<?php echo $rs['latitude']; ?>&longi=<?php echo $rs['lognitude']; ?>">Show route</a>
+
 
                </div>
+                  </div>
+                 </div>
+                 <hr>
 
-        </div>
+
 
         <?php
           }
@@ -184,7 +198,7 @@ $con  = mysqli_connect('localhost','root','','gps_service');
 
 
 
-    </div>
+
 
 
 
